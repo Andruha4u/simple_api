@@ -1,0 +1,21 @@
+{
+  "name": "Courses",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/index.js",
+  "dependencies": {
+    "mongoose": "^4.9.5",
+    "package.json": "^2.0.1",
+    "restify": "^4.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Roman",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:3Andruha4u/Univercity_DAL_Courses.git"
+  }
+}
