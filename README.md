@@ -12,12 +12,12 @@ Entities:
 - Discipline
 - Cathedra
 
-Route example:
-http://ip:port/CRUD_operation/Entity
+-- Route example:
+- http://ip:port/CRUD_operation/Entity
 
-http://localhost:5000/add/User
+- http://localhost:5000/add/User
 
-body:
+- body:
 ```
 { 
     "UserName" : "Andrew",
