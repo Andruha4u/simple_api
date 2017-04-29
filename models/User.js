@@ -10,10 +10,14 @@ var UserSchema = new Schema({
     Password : String,
     PhoneNumber : String,
     Roles : [],
-    GroupId :{
+    GroupId : {
         type : Schema.Types.ObjectId,
         ref: 'Group'
-    }
+    },
+    DisciplineIds : [{
+        type : Schema.Types.ObjectId,
+        ref: 'Discipline'
+    }]
 });
 
 module.exports = mongoose.model('User', UserSchema);
