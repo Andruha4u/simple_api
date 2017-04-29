@@ -14,11 +14,13 @@ function union(firstObj, secondObj){
     }
 
     //will use firstObj as a base object to fill it with other functions and props
+    var resultObj = JSON.parse(firstObj);
+
     for (var i = 0; i < secondObjKeys.length; i++){
-        firstObj[secondObjKeys[i]] = secondObj[secondObjKeys[i]];
+        resultObj[secondObjKeys[i]] = secondObj[secondObjKeys[i]];
     }
 
-    return firstObj;
+    return resultObj;
 }
 
 module.exports = union;
