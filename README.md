@@ -12,7 +12,7 @@ Entities:
 - Discipline
 - Cathedra
 
--- Route example:
+### Route example:
 - http://ip:port/CRUD_operation/Entity
 
 - http://localhost:5000/add/User
