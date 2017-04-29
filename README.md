@@ -13,17 +13,21 @@ Entities:
 - Cathedra
 
 Route example:
-http://ip:port/<CRUD operation>/<Entitie>
+http://ip:port/CRUD operation/Entitie
+
 http://localhost:5000/add/User
+
 body:
+```
 { 
-	"UserName" : "Andrew",
+    "UserName" : "Andrew",
     "Email" : "Andrew",
     "Password" : "Andrew",
     "PhoneNumber" : "Andrew",
     "Roles" : ["Admin"],
     "GroupId" : "58f48d45e8556a1978ad8cdc"
 }
+```
 
 
 ## Setting up project
