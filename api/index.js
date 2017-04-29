@@ -9,7 +9,7 @@ var mongoose = require('mongoose').connect(config.db_connection.url +
                                                                      .on('error', console.error.bind(console, 'connection error:'))
                                                                      .once('open', function() {
                                                                             console.log('connected to mongo!');
-                                                                        });;
+                                                                        });
 
 
 

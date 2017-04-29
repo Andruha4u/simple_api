@@ -4,19 +4,16 @@ var mongoose = require("mongoose");
 var Schema   = mongoose.Schema;
  
 var UserSchema = new Schema({
-    Name : String,
+    UserName : String,
     Email : String,
+    Login : String,
     Password : String,
-    SecurityStamp : String,
     PhoneNumber : String,
-    LockoutEndDateUtc : Date,
-    LockoutEnabled : Boolean,
-    AccessFailedCount : Number,
     Roles : [],
-    GroupIds :[{
+    GroupId :{
         type : Schema.Types.ObjectId,
         ref: 'Group'
-    }]
+    }
 });
 
 module.exports = mongoose.model('User', UserSchema);

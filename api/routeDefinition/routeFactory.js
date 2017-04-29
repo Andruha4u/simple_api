@@ -1,9 +1,9 @@
 'use strict';
 
-var user = require('./user.js');
-var group = require('./group.js');
-var discipline = require('./discipline.js');
-var cathedra = require('./cathedra.js');
+var user = require('./genericRoute.js');
+var group = require('./genericRoute.js');
+var discipline = require('./genericRoute.js');
+var cathedra = require('./genericRoute.js');
 
 module.exports = function (repositoryFactory) {
     return {

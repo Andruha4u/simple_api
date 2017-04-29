@@ -1,7 +1,30 @@
-# vava
-
-
+# Courses
 DAL Layer for Univercity project related for choosing courses
+CRUD operations: 
+- add: expect body as a entity                                      (PUT)
+- find: expect body with optionList                                 (POST)
+- delete: expect body as a entity but prefer body with _id prop     (DELETE)
+- update: expect body as a entity                                   (POST)
+
+Entities:
+- User
+- Group
+- Discipline
+- Cathedra
+
+Route example:
+http://ip:port/<CRUD operation>/<Entitie>
+http://localhost:5000/add/User
+body:
+{ 
+	"UserName" : "Andrew",
+    "Email" : "Andrew",
+    "Password" : "Andrew",
+    "PhoneNumber" : "Andrew",
+    "Roles" : ["Admin"],
+    "GroupId" : "58f48d45e8556a1978ad8cdc"
+}
+
 
 ## Setting up project
 
