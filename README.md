@@ -13,7 +13,7 @@ Entities:
 - Cathedra
 
 Route example:
-http://ip:port/CRUD operation/Entitie
+http://ip:port/CRUD_operation/Entity
 
 http://localhost:5000/add/User
 
