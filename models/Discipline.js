@@ -10,10 +10,6 @@ var DisciplineSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Group'
     },
-    SubscriberCathedraIds: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Group'
-    }],
     DisciplineType: String,
     Description: String,
     LecturerId: {
