@@ -5,22 +5,22 @@ var Schema = mongoose.Schema;
 
 var DisciplineSchema = new Schema({
     Name: String,
-    Semestr : String,
-    ProviderCathedraId : {
+    Semester: String,
+    ProviderCathedraId: {
         type: Schema.Types.ObjectId,
         ref: 'Group'
     },
-    SubscriberCathedraIds : [{
+    SubscriberCathedraIds: [{
         type: Schema.Types.ObjectId,
         ref: 'Group'
     }],
-    DisciplineType : String,
-    Description : String,
-    LecturerId  : {
+    DisciplineType: String,
+    Description: String,
+    LecturerId: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    StudentIds : [{
+    StudentIds: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
     }]
