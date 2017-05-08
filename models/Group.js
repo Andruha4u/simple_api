@@ -1,13 +1,13 @@
 'use strict';
 
 var mongoose = require("mongoose");
-var Schema   = mongoose.Schema;
- 
+var Schema = mongoose.Schema;
+
 var GroupSchema = new Schema({
-    Name : String,
-    Semester : String,
-    CathedraId : {
-        type : Schema.Types.ObjectId,
+    Name: String,
+    Course: String,
+    CathedraId: {
+        type: Schema.Types.ObjectId,
         ref: 'Cathedra'
     }
 });
