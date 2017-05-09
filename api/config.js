@@ -7,5 +7,9 @@ module.exports = {
         url: 'mongodb://localhost:',
         port: 27017,
         db: '/Courses'
+    },
+    entities_generation : {
+        full_path : './models/',
+        project_path : './../models/'
     }
 };

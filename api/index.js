@@ -11,9 +11,7 @@ var mongoose = require('mongoose').connect(config.db_connection.url +
                                                                             console.log('connected to mongo!');
                                                                         });
 
-
-
-var repositoryFactory = require('./../lib/repositoryFactory.js');
+var repositoryFactory = require('./../lib/repositoryFactory.js')(config.entities_generation);
 var routeFactory = require('./routeDefinition/routeFactory.js')(repositoryFactory); 
 
 var app = server(config);

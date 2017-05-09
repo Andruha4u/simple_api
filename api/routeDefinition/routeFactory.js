@@ -1,15 +1,17 @@
 'use strict';
 
-var user = require('./genericRoute.js');
-var group = require('./genericRoute.js');
-var discipline = require('./genericRoute.js');
-var cathedra = require('./genericRoute.js');
-
 module.exports = function (repositoryFactory) {
-    return {
-        user: user(repositoryFactory.user),
-        group: group(repositoryFactory.group),
-        discipline: discipline(repositoryFactory.discipline),
-        cathedra: cathedra(repositoryFactory.cathedra)
+    function setRouteFactory() {
+        var repositories = Object.keys(repositoryFactory);
+        var resultObj = {};
+        for (var i = 0; i < repositories.length; i++) {
+            var currentRepositoryName = repositories[i];
+            resultObj[currentRepositoryName] = require('./genericRoute.js')(repositoryFactory[currentRepositoryName]);
+        }
+        return resultObj;
     }
+
+    var routeFactory = setRouteFactory();
+    
+    return routeFactory;
 };

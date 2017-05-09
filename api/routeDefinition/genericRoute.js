@@ -45,6 +45,15 @@ module.exports = function (entityRepository) {
         }
     }
 
+    function deleteByIdAction(req, res, next) {
+        if (req.body.id ) {
+            resultProcessor(entityRepository.deleteByIdAsync(req.body.id), res, next);
+        }
+        else {
+            sendEror(res, 'Bad income data');
+        }
+    }
+
     function updateAction(req, res, next) {
         if (req.body.id && req.body.update) {
             resultProcessor(entityRepository.updateAsync(req.body), res, next);
@@ -59,6 +68,7 @@ module.exports = function (entityRepository) {
         add: addAction,
         find: findAction,
         delete: deleteAction,
+        deleteById: deleteByIdAction,
         update: updateAction
     }
 };

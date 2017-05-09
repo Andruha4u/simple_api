@@ -2,8 +2,8 @@
 
 module.exports = function (routeConfig, routeFactory) {
     function registerRoutes(server) {
-        server.get('/test', function (req, res) {
-            res.send(200, "Hello from test courses");// FOR TEST
+        server.get('/health-check', function (req, res) {
+            res.send(200, "Alive");
         });
         
         createCRUDRoutes(server);
@@ -16,6 +16,7 @@ module.exports = function (routeConfig, routeFactory) {
                 var currentRepositoryName = repositories[i];
                 server.put( currentRepositoryName + '/add', routeFactory[currentRepositoryName].add);
                 server.del( currentRepositoryName + '/delete', routeFactory[currentRepositoryName].delete);
+                server.del( currentRepositoryName + '/delete-by-id', routeFactory[currentRepositoryName].deleteById);
                 server.post( currentRepositoryName + '/find', routeFactory[currentRepositoryName].find);
                 server.post( currentRepositoryName + '/update', routeFactory[currentRepositoryName].update);
         }
