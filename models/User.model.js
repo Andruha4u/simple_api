@@ -15,9 +15,12 @@ var UserSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Group'
     },
-    DisciplineIds: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Discipline'
+    Disciplines: [{
+        _id : {
+            type: Schema.Types.ObjectId,
+            ref: 'Discipline'
+        },
+        Locked : Boolean
     }]
 });
 

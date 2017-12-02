@@ -4,11 +4,7 @@ var mongoose = require("mongoose");
 var Schema   = mongoose.Schema;
  
 var CathedraSchema = new Schema({
-    Name: String,
-    DisciplineSubscriptions: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Discipline'
-    }],
+    Name: String
 });
 
 module.exports = mongoose.model('Cathedra', CathedraSchema);

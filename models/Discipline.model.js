@@ -16,10 +16,7 @@ var DisciplineSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    StudentIds: [{
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }]
+    IsAvailable: Boolean
 });
 
 module.exports = mongoose.model('Discipline', DisciplineSchema);

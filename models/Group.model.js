@@ -9,7 +9,16 @@ var GroupSchema = new Schema({
     CathedraId: {
         type: Schema.Types.ObjectId,
         ref: 'Cathedra'
-    }
+    },
+    DisciplineSubscriptions: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Discipline'
+    }],
+    DisciplineConfiguration: [{
+        RequiredAmount: String,
+        DisciplineType: String,
+        Semester: String
+    }]
 });
 
 module.exports = mongoose.model('Group', GroupSchema);
