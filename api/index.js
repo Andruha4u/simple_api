@@ -11,9 +11,10 @@ var mongoose = require('mongoose').connect(config.db_connection.url +
                                                                             console.log('connected to mongo!');
                                                                         });
 
-var repositoryFactory = require('./../lib/repositoryFactory.js')(config.entities_generation);
+var repositoryFactory = require('../lib/repositoryFactory.js')(config.entities_generation);
 var routeFactory = require('./routeDefinition/routeFactory.js')(repositoryFactory); 
+var repositoryExtentions = require('../lib/repositoryExtentions')();
 
 var app = server(config);
 
-routes(config.route,routeFactory).register(app);
+routes(config.route,routeFactory,repositoryExtentions).register(app);
