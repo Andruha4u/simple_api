@@ -6,13 +6,13 @@ var Schema = mongoose.Schema;
 var DisciplineSchema = new Schema({
     Name: String,
     Semester: String,
-    ProviderCathedraId: {
+    _ProviderCathedraId: {
         type: Schema.Types.ObjectId,
         ref: 'Group'
     },
     DisciplineType: String,
     Description: String,
-    LecturerId: {
+    _LecturerId: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
