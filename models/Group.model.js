@@ -6,11 +6,11 @@ var Schema = mongoose.Schema;
 var GroupSchema = new Schema({
     Name: String,
     Course: String,
-    CathedraId: {
+    _CathedraId: {
         type: Schema.Types.ObjectId,
         ref: 'Cathedra'
     },
-    DisciplineSubscriptions: [{
+    _DisciplineSubscriptions: [{
         type: Schema.Types.ObjectId,
         ref: 'Discipline'
     }],
