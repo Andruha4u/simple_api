@@ -11,7 +11,7 @@ var UserSchema = new Schema({
     PhoneNumber: String,
     Course: String,
     Roles: [],
-    _GroupId: {
+    GroupId: {
         type: Schema.Types.ObjectId,
         ref: 'Group'
     },
