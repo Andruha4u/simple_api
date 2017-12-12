@@ -1,17 +1,23 @@
 'use strict';
 
 var mongoose = require("mongoose");
+var uuid = require('node-uuid');
 var Schema = mongoose.Schema;
+require('mongoose-uuid2')(mongoose);
 
 var GroupSchema = new Schema({
+    _id: { 
+        type: mongoose.Types.UUID,
+        default: uuid.v4
+    },
     Name: String,
     Course: String,
     CathedraId: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Types.UUID,
         ref: 'Cathedra'
     },
     DisciplineSubscriptions: [{
-        type: Schema.Types.ObjectId,
+        type: mongoose.Types.UUID,
         ref: 'Discipline'
     }],
     DisciplineConfiguration: [{

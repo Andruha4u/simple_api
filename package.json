@@ -4,9 +4,11 @@
   "description": "",
   "main": "api/index.js",
   "dependencies": {
-    "mongoose": "^4.9.5",
-    "package.json": "^2.0.1",
-    "restify": "^4.3.0"
+    "mongoose": "4.9.5",
+    "mongoose-uuid2": "2.0.1",
+    "node-uuid": "1.4.8",
+    "package.json": "2.0.1",
+    "restify": "4.3.0"
   },
   "devDependencies": {},
   "scripts": {
