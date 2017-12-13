@@ -3,12 +3,11 @@
 var mongoose = require("mongoose");
 var uuid = require('node-uuid');
 var Schema = mongoose.Schema;
-require('mongoose-uuid2')(mongoose);
 
 var UserSchema = new Schema({
     _id: { 
-        type: mongoose.Types.UUID,
-        default: uuid.v4
+        type: String,
+        default: uuid.v1
     },
     UserName: String,
     Email: String,
@@ -18,12 +17,12 @@ var UserSchema = new Schema({
     Course: String,
     Roles: [],
     GroupId: {
-        type: mongoose.Types.UUID,
+        type: String,
         ref: 'Group'
     },
     Disciplines: [{
         _id : {
-            type: mongoose.Types.UUID,
+            type: String,
             ref: 'Discipline'
         },
         Locked : Boolean
