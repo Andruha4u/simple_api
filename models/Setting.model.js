@@ -1,9 +1,14 @@
 'use strict';
 
 var mongoose = require("mongoose");
-var Schema   = mongoose.Schema;
+var uuid = require('node-uuid');
+var Schema = mongoose.Schema;
  
 var SettingSchema = new Schema({
+    _id: { 
+        type: String,
+        default: uuid.v1
+    },
     Name: String,
     Value: String,
 });

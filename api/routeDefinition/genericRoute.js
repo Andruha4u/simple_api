@@ -3,7 +3,7 @@
 module.exports = function (entityRepository) {
 
     function sendEror(res, err) {
-        res.send(400, 'Group route : ' + err)
+        res.send(400, 'Entity route : ' + err)
     }
 
     function resultProcessor(asyncResult, res, next) {
