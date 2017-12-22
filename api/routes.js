@@ -6,7 +6,7 @@ module.exports = function (routeConfig, routeFactory, repositoryExtentions) {
             res.send(200, "Alive");
         });
         server.post('findStudentsByDisciplineId', function(req, res, next){
-            repositoryExtentions.findStudentsByDisciplineId(req.disciplineId).then(function (result) {
+            repositoryExtentions.findStudentsByDisciplineId(req.body.disciplineId).then(function (result) {
                 res.send(200, result)
             });
         });
@@ -18,7 +18,7 @@ module.exports = function (routeConfig, routeFactory, repositoryExtentions) {
         });
         
         server.post('findGroupsByDisciplineId', function(req, res, next){
-            repositoryExtentions.findGroupsByDisciplineId(req.disciplineId).then(function (result) {
+            repositoryExtentions.findGroupsByDisciplineId(req.body.disciplineId).then(function (result) {
                 res.send(200, result)
             });
         });
